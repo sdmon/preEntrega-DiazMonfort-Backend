@@ -1,0 +1,51 @@
+/// _______________________ PRODUCTS ___________________________
+
+GET http://localhost:8080/api/products
+
+###
+GET http://localhost:8080/api/products/6
+
+###
+POST http://localhost:8080/api/products/
+Content-Type: application/json
+
+{       
+    
+    "title": "The Last Faith",
+    "description": "Kumi Souls Games",
+    "price": 12000,
+    "thumbnail": "img6.jpg",
+    "code": "PQR",
+    "status": true,
+    "stock": 50
+}
+
+###
+PUT http://localhost:8080/api/products/6
+Content-Type: application/json
+
+{
+  "updateProduct": {    
+    "title": "The Last Faith",
+    "description": "Kumi Souls Games",
+    "price": 6000,
+    "thumbnail": "img6.jpg",
+    "code": "PQR",
+    "status": true,
+    "stock": 20
+  }
+}
+
+###
+DELETE http://localhost:8080/api/products/6
+
+/// ____________________________ CARTS ___________________________
+
+###
+POST http://localhost:8080/api/carts
+
+###
+GET http://localhost:8080/api/carts/2
+
+###
+POST http://localhost:8080/api/carts/2/product/4
